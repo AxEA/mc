@@ -156,6 +156,9 @@ static const global_keymap_ini_t default_main_x_keymap[] = {
     {"PutOtherTagged", "ctrl-t"},
     {"ChangeMode", "c"},
     {"ChangeOwn", "o"},
+#ifdef ENABLE_EXT2FS_ATTR
+    {"ChangeAttributes", "e"},
+#endif /* ENABLE_EXT2FS_ATTR */
     {"PutCurrentLink", "r"},
     {"PutOtherLink", "ctrl-r"},
     {"Link", "l"},

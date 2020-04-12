@@ -917,7 +917,7 @@ chattr_init (void)
 
             check_attr_mod[check_attr_mod_num++] = i;
 
-            width = 4 + str_term_width1 (check_attr[i].text);   /* "(Q) text "*/
+            width = 4 + str_term_width1 (check_attr[i].text);   /* "(Q) text " */
             check_attr_width = MAX (check_attr_width, width);
         }
 
@@ -1332,7 +1332,7 @@ chattr_cmd (void)
 const char *
 chattr_get_as_str (unsigned long attr)
 {
-    static char str[32 + 1];            /* 32 bits in attributes (unsigned long) */
+    static char str[32 + 1];    /* 32 bits in attributes (unsigned long) */
 
     chattr_fill_str (attr, str);
 

@@ -75,6 +75,9 @@ static name_keymap_t command_names[] = {
     {"ChangeMode", CK_ChangeMode},
     {"ChangeOwn", CK_ChangeOwn},
     {"ChangeOwnAdvanced", CK_ChangeOwnAdvanced},
+#ifdef ENABLE_EXT2FS_ATTR
+    {"ChangeAttributes", CK_ChangeAttributes},
+#endif
     {"Remove", CK_Remove},
     {"BackSpace", CK_BackSpace},
     {"Redo", CK_Redo},
