@@ -906,12 +906,15 @@ help_callback (Widget * w, Widget * sender, widget_msg_t msg, int parm, void *da
         return help_resize (h);
 
     case MSG_KEY:
-        if (help_handle_key (h, parm) == MSG_HANDLED)
         {
-            widget_draw (w);
-            return MSG_HANDLED;
+            cb_ret_t ret;
+
+            ret = help_handle_key (h, parm);
+            if (ret == MSG_HANDLED)
+                widget_draw (w);
+
+            return ret;
         }
-        return MSG_NOT_HANDLED;
 
     case MSG_ACTION:
         /* Handle shortcuts and buttonbar. */
